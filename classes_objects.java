@@ -6,9 +6,18 @@ class Person{
         System.out.println("My Name is : "+ name);
 
         }
-    void calculateYearsToRetirement(){
+    int calculateYearsToRetirement(){
         int yearsLeft = 60-age;
         System.out.println("I have " + yearsLeft + " years left to my retirement.");
+        return yearsLeft;
+    }
+
+    int getAge(){
+        return age;
+    }
+    
+    String getName(){
+        return name;
     }
 }
 
@@ -18,7 +27,14 @@ public class classes_objects {
         person1.name = "Hannah Montana";
         person1.age = 25;
 
-        person1.speak();
-        person1.calculateYearsToRetirement();
+        //person1.speak();
+        int years = person1.calculateYearsToRetirement();
+        System.out.println(years);
+
+        int age = person1.getAge();
+        String name = person1.getName();
+
+        System.out.println("My Name is : "+ name + " and my age is "+ age + ".");
     }
+    
 }
